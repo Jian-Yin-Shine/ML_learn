@@ -4,6 +4,7 @@
 - 信息增益
 - 划分数据集
 - 递归构建决策树
+- 使用决策树
 - 案例
 
 ### 信息增益
@@ -59,3 +60,25 @@ def creatTree(dataSet, labels):
 # {特征：{取值：标签，取值：{}}}
 ```
 
+同理，使用决策树时，递归遍历决策树
+
+```python
+def classify(inputTree, featLabels, testVec):
+    # firstStr = inputTree.keys()
+    for i in inputTree:
+        firstStr = i
+        break
+    secondDict = inputTree[firstStr]
+    featIndex = featLabels.index(firstStr)
+    for key in secondDict.keys():
+        if testVec[featIndex] == key:
+            if type(secondDict[key]).__name__ == 'dict':
+                classLabel = classify(secondDict[key], featLabels, testVec)
+            else:
+                classLabel = secondDict[key]
+    return classLabel
+```
+
+
+
+以上就是《机器学习实战》中的决策树的基本思路，思路还算清晰，里面有部分不适合py3的，例如dict.keys()[0]，然后打算重新写一下这部分的代码。
