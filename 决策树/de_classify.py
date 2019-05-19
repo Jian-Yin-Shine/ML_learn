@@ -83,13 +83,21 @@ def test(tree, example):
                 label  = tree[i]
     return label
 
+import pickle
 
 if __name__ == '__main__':
     data, vec = dataSet()
     print(calcShannon(data))
     # print(creatTree(data, vec))
     tree = creatTree(data, vec)
-    print(tree)
+    # print(tree)
+
+    fw = open('decision_tree.txt', 'wb')
+    pickle.dump(tree,fw)
+    fw.close()
+    '''
+    file = open('decision_tree.txt', 'rb')
+    tree = pickle.load(file)'''
 
     example = [1, 1]
     print(test(tree, example))
