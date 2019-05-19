@@ -82,3 +82,7 @@ def classify(inputTree, featLabels, testVec):
 
 
 以上就是《机器学习实战》中的决策树的基本思路，思路还算清晰，里面有部分不适合py3的，例如dict.keys()[0]，然后打算重新写一下这部分的代码。
+
+[https://github.com/Jian-Yin-Shine/ML_learn/blob/master/%E5%86%B3%E7%AD%96%E6%A0%91/de_classify.py](https://github.com/Jian-Yin-Shine/ML_learn/blob/master/决策树/de_classify.py)
+
+例如：在测试部分，其实只需要example的特征向量，和决策树。
