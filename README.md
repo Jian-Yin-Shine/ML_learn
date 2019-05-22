@@ -5,4 +5,5 @@
 - [决策树](https://github.com/Jian-Yin-Shine/ML_learn/tree/master/决策树)
 - [朴素贝叶斯](https://github.com/Jian-Yin-Shine/ML_learn/tree/master/朴素贝叶斯)
 - [逻辑回归](https://github.com/Jian-Yin-Shine/ML_learn/tree/master/Logistic回归)
+- [支持向量机](https://github.com/Jian-Yin-Shine/ML_learn/tree/master/SVM)
 
